@@ -11,7 +11,7 @@ const TeamsPage = () => {
   const [error, setError] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const [editTeam, setEditTeam] = useState(null);
-  const [form, setForm] = useState({ name: "", coach: "" });
+  const [form, setForm] = useState({ name: "", description: "" });
   const [modalType, setModalType] = useState("create"); 
   const [deleteId, setDeleteId] = useState(null);
   const [actionMsg, setActionMsg] = useState("");
@@ -36,7 +36,7 @@ const TeamsPage = () => {
   }, []);
 
   const openCreateModal = () => {
-    setForm({ name: "", coach: "" });
+    setForm({ name: "", description: "" });
     setModalType("create");
     setModalOpen(true);
     setEditTeam(null);
@@ -44,7 +44,7 @@ const TeamsPage = () => {
   };
 
   const openEditModal = (team) => {
-    setForm({ name: team.name, coach: team.coach });
+    setForm({ name: team.name, description: team.description });
     setModalType("edit");
     setEditTeam(team);
     setModalOpen(true);
@@ -68,12 +68,18 @@ const TeamsPage = () => {
     try {
       await axios.post("http://localhost:5169/api/teams", {
         name: form.name,
-        coach: form.coach,
+        description: form.description
+      },{
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
       });
       setModalOpen(false);
       fetchTeams();
     } catch (err) {
       setActionMsg("Failed to create team.");
+      console.error(err);
     }
   };
 
@@ -82,9 +88,13 @@ const TeamsPage = () => {
     setActionMsg("");
     try {
       await axios.put(`http://localhost:5169/api/teams/${editTeam.id}`, {
-        id: editTeam.id,
         name: form.name,
-        coach: form.coach,
+        description: form.description,
+      },{
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
       });
       setModalOpen(false);
       fetchTeams();
@@ -96,11 +106,16 @@ const TeamsPage = () => {
   const handleDelete = async () => {
     setActionMsg("");
     try {
-      await axios.delete(`http://localhost:5169/api/teams/${deleteId}`);
+      await axios.delete(`http://localhost:5169/api/teams/${deleteId}`,{
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
+      });
       setModalOpen(false);
       fetchTeams();
     } catch (err) {
       setActionMsg("Failed to delete team.");
+      console.error(err);
     }
   };
 
@@ -149,7 +164,7 @@ const TeamsPage = () => {
                     <Eye className="w-5 h-5 text-white" />
                   </button>
                 </div>
-                <div className="text-gray-300 mb-2">Coach: {team.coach}</div>
+                <div className="text-gray-300 mb-2">Description: {team.description}</div>
                 {role === "Admin" && (
                   <div className="flex gap-2">
                     <button
@@ -189,12 +204,12 @@ const TeamsPage = () => {
           />
           <input
             type="text"
-            name="coach"
-            placeholder="Coach Name"
-            value={form.coach}
+            name="description"
+            placeholder="description "
+            value={form.description}
             onChange={handleFormChange}
             className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
-            required
+          
           />
           <button
             type="submit"

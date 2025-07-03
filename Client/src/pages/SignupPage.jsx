@@ -34,6 +34,7 @@ const SignupPage = () => {
         setError(err.response.data.message);
       } else {
         setError("Network error. Please try again.");
+        
       }
     } finally {
       setLoading(false);

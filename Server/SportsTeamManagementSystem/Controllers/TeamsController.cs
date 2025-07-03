@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore; // Added for async operations
+using Microsoft.EntityFrameworkCore; 
 using SportsTeamManagementSystem.Data;
 using SportsTeamManagementSystem.DTOs;
 using SportsTeamManagementSystem.Models;
@@ -8,7 +8,7 @@ using SportsTeamManagementSystem.Data;
 using SportsTeamManagementSystem.DTOs;
 using SportsTeamManagementSystem.Models;
 
-namespace SportsTeamManagement.Controllers // Fixed namespace
+namespace SportsTeamManagement.Controllers 
 {
     [ApiController]
     [Route("api/teams")]

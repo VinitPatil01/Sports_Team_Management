@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj": {}
+    "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj": {
+    "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj",
         "projectName": "SportsTeamManagementSystem",
-        "projectPath": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj",
+        "projectPath": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj",
         "packagesPath": "C:\\Users\\VINIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

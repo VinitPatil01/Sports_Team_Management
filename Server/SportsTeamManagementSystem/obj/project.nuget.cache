@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aonyhG2atNU=",
+  "dgSpecHash": "bdNeEfxHO38=",
   "success": true,
-  "projectFilePath": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VINIT\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\VINIT\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

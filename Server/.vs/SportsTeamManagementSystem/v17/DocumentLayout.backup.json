@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\",
+  "WorkspaceRootPath": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -16,62 +16,56 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\AppData\\Local\\Temp\\vsjelsdr..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\repository\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\repository\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\repository\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\desktop\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\dtos\\teamdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\dtos\\teamdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\dtos\\teamdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\AppData\\Local\\Temp\\vsjelsdr..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\migrations\\20250702164320_makeoptionalfieldsnullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\migrations\\20250702164320_makeoptionalfieldsnullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\AppData\\Local\\Temp\\vsjelsdr..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\migrations\\20250702163935_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\migrations\\20250702163935_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\migrations\\20250702163742_addpasswordsaltcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\migrations\\20250702163742_addpasswordsaltcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,98 +84,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "dbo.TeamPlayers [Data]",
+              "Title": "dbo.TeamPlayers.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__mssqllocaldb/SportsTeamDb/True/SqlTable/dbo.TeamPlayers.sql",
-              "ToolTip": "dbo.TeamPlayers [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__mssqllocaldb/SportsTeamDb/True/SqlTable/dbo.TeamPlayers.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-02T18:52:10.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T18:52:10.172Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SQLQuery1.sql ",
+              "Title": "vsjelsdr..sql",
               "DocumentMoniker": "C:\\Users\\VINIT\\AppData\\Local\\Temp\\vsjelsdr..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\vsjelsdr..sql",
-              "ToolTip": "SQLQuery1.sql *",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\vsjelsdr..sql",
+              "ToolTip": "C:\\Users\\VINIT\\AppData\\Local\\Temp\\vsjelsdr..sql",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\vsjelsdr..sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-02T18:11:39.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T18:11:39.304Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Program.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\Program.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAIwCIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:48:27.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:48:27.725Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\appsettings.json",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\appsettings.json",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\appsettings.json",
               "RelativeToolTip": "SportsTeamManagementSystem\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-02T16:47:10.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:47:10.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "20250702164320_MakeOptionalFieldsNullable.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\Migrations\\20250702164320_MakeOptionalFieldsNullable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:43:20.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:43:20.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "20250702163935_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\Migrations\\20250702163935_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:39:35.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:39:35.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "20250702163742_AddPasswordSaltColumn.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\Migrations\\20250702163742_AddPasswordSaltColumn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:37:42.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:37:42.885Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TeamsController.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\TeamsController.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\TeamsController.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\TeamsController.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\TeamsController.cs*",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\TeamsController.cs*",
               "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\TeamsController.cs*",
-              "ViewState": "AgIAACwAAAAAAAAAAADgvzsAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T16:10:59.922Z",
               "EditorCaption": ""
@@ -189,116 +177,107 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.Teams [Data]",
+              "Title": "dbo.Teams.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__mssqllocaldb/SportsTeamDb/True/SqlTable/dbo.Teams.sql",
-              "ToolTip": "dbo.Teams [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__mssqllocaldb/SportsTeamDb/True/SqlTable/dbo.Teams.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-02T18:52:03.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T18:52:03.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Models\\User.cs",
+              "RelativeToolTip": "SportsTeamManagementSystem\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T16:34:59.01Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Models\\User.cs",
-              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Models\\User.cs",
-              "RelativeToolTip": "SportsTeamManagementSystem\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:34:59.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "AuthDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\AuthDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\AuthDTOs.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\DTOs\\AuthDTOs.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\AuthDTOs.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\AuthDTOs.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\DTOs\\AuthDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:34:28.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IAuthRepository.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
-              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
-              "RelativeToolTip": "SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:29:11.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:28:51.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "StatsController.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\StatsController.cs",
-              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\StatsController.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\StatsController.cs",
-              "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\StatsController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwCsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:27:36.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:34:28.987Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
+              "RelativeToolTip": "SportsTeamManagementSystem\\Repository\\IAuthRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T16:29:11.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T16:28:51.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StatsController.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\StatsController.cs",
+              "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\StatsController.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\StatsController.cs",
+              "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\StatsController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T16:27:36.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\AuthController.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAwwFIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:26:53.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:26:53.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "TeamDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\TeamDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\TeamDTOs.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\DTOs\\TeamDTOs.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\TeamDTOs.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\DTOs\\TeamDTOs.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\DTOs\\TeamDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:17:16.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:17:16.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 12,
               "Title": "MatchesController.cs",
-              "DocumentMoniker": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\MatchesController.cs",
+              "DocumentMoniker": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\MatchesController.cs",
               "RelativeDocumentMoniker": "SportsTeamManagementSystem\\Controllers\\MatchesController.cs",
-              "ToolTip": "C:\\Users\\VINIT\\Desktop\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\MatchesController.cs",
+              "ToolTip": "C:\\Users\\VINIT\\Music\\Projects\\Sports_Team_Management_Dotnet\\Server\\SportsTeamManagementSystem\\Controllers\\MatchesController.cs",
               "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\MatchesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T13:33:30.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T13:33:30.981Z"
             }
           ]
         }

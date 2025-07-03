@@ -11,7 +11,7 @@ const TeamDetailsPage = () => {
   const [error, setError] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState("edit");
-  const [form, setForm] = useState({ name: "", coach: "" });
+  const [form, setForm] = useState({ name: "", description: "" });
   const [actionMsg, setActionMsg] = useState("");
   const [playerId, setPlayerId] = useState("");
   const [removePlayerId, setRemovePlayerId] = useState(null);
@@ -57,7 +57,7 @@ const TeamDetailsPage = () => {
   }, [id]);
 
   const openEditModal = () => {
-    setForm({ name: team.name, coach: team.coach });
+    setForm({ name: team.name, description: team.description });
     setModalType("edit");
     setModalOpen(true);
     setActionMsg("");
@@ -88,7 +88,7 @@ const TeamDetailsPage = () => {
       await axios.put(`http://localhost:5169/api/teams/${id}`, {
         id: team.id,
         name: form.name,
-        coach: form.coach,
+        description: form.description,
       });
       setModalOpen(false);
       fetchTeam();
@@ -164,7 +164,7 @@ const TeamDetailsPage = () => {
                 Edit
               </button>
             </div>
-            <div className="text-gray-300 mb-4">Coach: {team.coach}</div>
+            <div className="text-gray-300 mb-4">description: {team.description}</div>
             <div className="flex gap-4 mb-6">
               <button
                 className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2 rounded-full shadow-lg text-lg"
@@ -211,9 +211,9 @@ const TeamDetailsPage = () => {
           />
           <input
             type="text"
-            name="coach"
-            placeholder="Coach Name"
-            value={form.coach}
+            name="description"
+            placeholder="description"
+            value={form.description}
             onChange={handleFormChange}
             className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
             required
