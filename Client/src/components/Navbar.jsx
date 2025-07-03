@@ -1,26 +1,64 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [role, setRole] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+    if (token) {
+      const decoded = jwtDecode(token);
+      setRole(decoded.role);
+      setUserId(decoded.nameid || decoded.sub || decoded.userId || decoded.id);
+    }
+  }, []);
+
+  // Determine stats link and label
+  const statsLink = role === "Admin" ? "/stats/team" : userId ? `/stats/player/${userId}` : `"/login"`;
+  const statsLabel = role === "Admin" ? "Team Stats" : "My Stats";
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    setRole(null);
+    setUserId(null);
+    navigate("/login");
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10 shadow-lg">
+    <nav className={`fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur transition-shadow duration-300 ${scrolled ? 'shadow-2xl' : ''}`}>
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <Link to="/" className="font-black text-2xl text-red-600 tracking-widest drop-shadow">SPORTSFLIX</Link>
-        {/* Desktop menu */}
         <div className="hidden md:flex space-x-6 items-center">
           <Link to="/teams" className="text-white hover:text-red-500 font-semibold transition">Teams</Link>
           <Link to="/matches" className="text-white hover:text-red-500 font-semibold transition">Matches</Link>
           <Link to="/attendance" className="text-white hover:text-red-500 font-semibold transition">Attendance</Link>
-          <Link to="/stats/player/1" className="text-white hover:text-red-500 font-semibold transition">My Stats</Link>
+          <Link to={statsLink} className="text-white hover:text-red-500 font-semibold transition">{statsLabel}</Link>
           <Link to="/profile/1" className="text-white hover:text-red-500 font-semibold transition">Profile</Link>
-          <Link to="/login" className="text-white hover:text-red-500 font-semibold transition">Login</Link>
+          {isLoggedIn ? (
+            <button onClick={handleLogout} className="text-white hover:text-red-500 font-semibold transition bg-transparent border-none cursor-pointer">Logout</button>
+          ) : (
+            <Link to="/login" className="text-white hover:text-red-500 font-semibold transition">Login</Link>
+          )}
           <div className="ml-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center border border-white/30">
             <span className="text-white font-bold">U</span>
           </div>
         </div>
-        {/* Hamburger icon */}
         <button
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
           onClick={() => setMenuOpen((open) => !open)}
@@ -40,9 +78,13 @@ const Navbar = () => {
           <Link to="/teams" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>Teams</Link>
           <Link to="/matches" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>Matches</Link>
           <Link to="/attendance" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>Attendance</Link>
-          <Link to="/stats/player/1" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>My Stats</Link>
+          <Link to={statsLink} className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>{statsLabel}</Link>
           <Link to="/profile/1" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>Profile</Link>
-          <Link to="/login" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>Login</Link>
+          {isLoggedIn ? (
+            <button onClick={() => { setMenuOpen(false); handleLogout(); }} className="text-white hover:text-red-500 font-semibold transition bg-transparent border-none cursor-pointer">Logout</button>
+          ) : (
+            <Link to="/login" className="text-white text-2xl font-semibold hover:text-red-500" onClick={() => setMenuOpen(false)}>Login</Link>
+          )}
           <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center border border-white/30">
             <span className="text-white font-bold text-xl">U</span>
           </div>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const PlayerAttendancePage = () => {
-  // Placeholder data
   const attendance = [
     { date: "2024-07-01", status: "Present" },
     { date: "2024-07-10", status: "Absent" },

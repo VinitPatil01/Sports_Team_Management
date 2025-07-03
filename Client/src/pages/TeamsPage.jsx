@@ -186,7 +186,6 @@ const TeamsPage = () => {
           </div>
         )}
       </div>
-      {/* Create/Edit Modal */}
       <Modal isOpen={modalOpen && (modalType === "create" || modalType === "edit")}
         onClose={() => setModalOpen(false)}>
         <h2 className="text-2xl font-bold text-white mb-6 text-center">
@@ -220,7 +219,6 @@ const TeamsPage = () => {
         </form>
         {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
       </Modal>
-      {/* Delete Modal */}
       <Modal isOpen={modalOpen && modalType === "delete"} onClose={() => setModalOpen(false)}>
         <h2 className="text-2xl font-bold text-white mb-6 text-center">Delete Team</h2>
         <p className="text-white mb-6 text-center">Are you sure you want to delete this team?</p>

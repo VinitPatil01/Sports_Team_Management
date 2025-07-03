@@ -1,7 +1,6 @@
 import React from "react";
 
 const UsersListPage = () => {
-  // Placeholder data
   const users = [
     { id: 1, username: "player1", role: "Player" },
     { id: 2, username: "admin1", role: "Admin" },

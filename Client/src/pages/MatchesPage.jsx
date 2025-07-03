@@ -3,6 +3,7 @@ import axios from "axios";
 import Modal from "../components/Modal";
 import { Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
 const MatchesPage = () => {
   const [matches, setMatches] = useState([]);
@@ -10,18 +11,28 @@ const MatchesPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalType, setModalType] = useState("create"); // 'create' or 'edit'
+  const [modalType, setModalType] = useState("create"); 
   const [editMatch, setEditMatch] = useState(null);
   const [form, setForm] = useState({ matchDate: "", location: "", homeTeamId: "", awayTeamId: "" });
   const [deleteId, setDeleteId] = useState(null);
   const [actionMsg, setActionMsg] = useState("");
+  const [role, setRole] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decoded = jwtDecode(token);
+      setRole(decoded.role);
+    }
+  }, []);
 
   const fetchMatches = async () => {
     setLoading(true);
     setError("");
     try {
       const res = await axios.get("http://localhost:5169/api/matches");
+      console.log(res.data);
       setMatches(res.data);
     } catch (err) {
       setError("Failed to load matches.");
@@ -133,7 +144,9 @@ const MatchesPage = () => {
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-3xl font-extrabold text-white tracking-wide">Matches</h2>
-          <button className="bg-red-600 hover:bg-red-700 transition text-white font-bold px-6 py-3 rounded-full shadow-lg text-lg" onClick={openCreateModal}>+ Schedule Match</button>
+          {role === "Admin" && (
+            <button className="bg-red-600 hover:bg-red-700 transition text-white font-bold px-6 py-3 rounded-full shadow-lg text-lg" onClick={openCreateModal}>+ Schedule Match</button>
+          )}
         </div>
         {loading ? (
           <div className="text-white text-center">Loading matches...</div>
@@ -155,16 +168,18 @@ const MatchesPage = () => {
                 </div>
                 <div className="text-gray-300 mb-2">{match.location}</div>
                 <div className="text-gray-400 mb-4">{new Date(match.matchDate).toLocaleString()}</div>
-                <div className="flex gap-2">
-                  <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition" onClick={() => openEditModal(match)}>Edit</button>
-                  <button className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition" onClick={() => openDeleteModal(match.id)}>Delete</button>
-                </div>
+                {role === "Admin" && (
+                  <div className="flex gap-2">
+                    <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition" onClick={() => openEditModal(match)}>Edit</button>
+                    <button className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition" onClick={() => openDeleteModal(match.id)}>Delete</button>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         )}
       </div>
-      {/* Create/Edit Modal */}
+  
       <Modal isOpen={modalOpen && (modalType === "create" || modalType === "edit")}
         onClose={() => setModalOpen(false)}>
         <h2 className="text-2xl font-bold text-white mb-6 text-center">
@@ -221,7 +236,7 @@ const MatchesPage = () => {
         </form>
         {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
       </Modal>
-      {/* Delete Modal */}
+
       <Modal isOpen={modalOpen && modalType === "delete"} onClose={() => setModalOpen(false)}>
         <h2 className="text-2xl font-bold text-white mb-6 text-center">Delete Match</h2>
         <p className="text-white mb-6 text-center">Are you sure you want to delete this match?</p>

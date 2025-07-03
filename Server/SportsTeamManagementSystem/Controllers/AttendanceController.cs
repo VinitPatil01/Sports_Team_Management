@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SportsTeamManagementSystem.Data;
 using SportsTeamManagementSystem.Models;
+using SportsTeamManagementSystem.DTOs;
 
 namespace SportsTeamManagementSystem.Controllers
 {
@@ -17,8 +18,15 @@ namespace SportsTeamManagementSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> MarkAttendance([FromBody] Attendance attendance)
+        public async Task<IActionResult> MarkAttendance([FromBody] AttendanceCreateDto dto)
         {
+            var attendance = new Attendance
+            {
+                PlayerId = dto.PlayerId,
+                MatchId = dto.MatchId,
+                IsPresent = dto.IsPresent,
+                AttendanceDate = dto.AttendanceDate
+            };
             await _context.Attendances.AddAsync(attendance);
             await _context.SaveChangesAsync();
             return Ok(attendance);

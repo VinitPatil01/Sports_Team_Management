@@ -137,7 +137,7 @@ namespace SportsTeamManagement.Controllers
         {
             var players = await _context.TeamPlayers
                 .Where(tp => tp.TeamId == teamId)
-                .Include(tp => tp.Player)  // Eager load player data
+                .Include(tp => tp.Player)  
                 .Select(tp => tp.Player)
                 .ToListAsync();
 

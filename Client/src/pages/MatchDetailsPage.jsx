@@ -61,7 +61,7 @@ const MatchDetailsPage = () => {
             </h2>
             <div className="text-gray-300 text-lg mb-2 text-center">{match.location}</div>
             <div className="text-gray-400 text-center mb-6">{new Date(match.matchDate).toLocaleString()}</div>
-            {/* Add more match details here if available, e.g. stats, attendance, etc. */}
+            
             <div className="mt-8 flex justify-center">
               <button
                 className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full shadow-lg text-lg"

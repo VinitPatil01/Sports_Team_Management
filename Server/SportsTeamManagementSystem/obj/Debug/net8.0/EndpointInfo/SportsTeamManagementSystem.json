@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Attendance"
+                "$ref": "#/components/schemas/AttendanceCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Attendance"
+                "$ref": "#/components/schemas/AttendanceCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Attendance"
+                "$ref": "#/components/schemas/AttendanceCreateDto"
               }
             }
           }
@@ -298,6 +298,29 @@
         }
       }
     },
+    "/api/matches/player/{playerId}": {
+      "get": {
+        "tags": [
+          "Matches"
+        ],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Stats": {
       "post": {
         "tags": [
@@ -307,17 +330,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PerformanceStats"
+                "$ref": "#/components/schemas/PerformanceStatsDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PerformanceStats"
+                "$ref": "#/components/schemas/PerformanceStatsDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PerformanceStats"
+                "$ref": "#/components/schemas/PerformanceStatsDto"
               }
             }
           }
@@ -354,6 +377,104 @@
     },
     "/api/Stats/team/{id}": {
       "get": {
+        "tags": [
+          "Stats"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Stats/teams/summary": {
+      "get": {
+        "tags": [
+          "Stats"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Stats/team/{teamId}/players": {
+      "get": {
+        "tags": [
+          "Stats"
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Stats/{id}": {
+      "put": {
+        "tags": [
+          "Stats"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerformanceStatsUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerformanceStatsUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerformanceStatsUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
         "tags": [
           "Stats"
         ],
@@ -695,6 +816,27 @@
         },
         "additionalProperties": false
       },
+      "AttendanceCreateDto": {
+        "type": "object",
+        "properties": {
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "matchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isPresent": {
+            "type": "boolean"
+          },
+          "attendanceDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "Match": {
         "type": "object",
         "properties": {
@@ -809,6 +951,70 @@
           },
           "match": {
             "$ref": "#/components/schemas/Match"
+          },
+          "goals": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assists": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fouls": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minutesPlayed": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PerformanceStatsDto": {
+        "type": "object",
+        "properties": {
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "matchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "goals": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assists": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fouls": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minutesPlayed": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PerformanceStatsUpdateDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "matchId": {
+            "type": "integer",
+            "format": "int32"
           },
           "goals": {
             "type": "integer",

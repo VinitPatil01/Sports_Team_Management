@@ -43,7 +43,6 @@ const SignupPage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black relative">
-      {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
       <div className="relative z-10 w-full max-w-md p-8 bg-black/75 rounded-lg" style={{ backgroundColor: 'rgba(0,0,0,0.75)', padding: '48px', borderRadius: '8px' }}>
         <h1 className="text-white text-3xl font-bold mb-8 text-center">Sign Up</h1>

@@ -11,7 +11,6 @@ const ProfilePage = () => {
       setLoading(true);
       setError("");
       try {
-        // Replace with your actual profile endpoint and auth header if needed
         const token = localStorage.getItem("token");
         const res = await axios.get("http://localhost:5169/api/Auth/me", {
           headers: { Authorization: `Bearer ${token}` },
@@ -45,7 +44,6 @@ const ProfilePage = () => {
               <div className="text-gray-300 mb-2">{user.email}</div>
               <div className="text-gray-400 mb-2">Role: {user.role}</div>
             </div>
-            {/* Add more profile actions/info here if needed */}
             <div className="flex justify-center mt-6">
               <button
                 className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full shadow-lg text-lg"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode"; // Fixed import
+import { jwtDecode } from "jwt-decode"; 
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
@@ -12,6 +12,9 @@ const LoginPage = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [role, setRole] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const token = localStorage.getItem("token");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,17 +25,25 @@ const LoginPage = () => {
     setLoading(true);
     setMessage("");
     setError("");
+    if (token) {
+      const decoded = jwtDecode(token);
+      console.log(decoded); 
+      setRole(decoded.role);
+      setUserId(decoded.nameid);
+    }
+    
     try {
       const res = await axios.post("http://localhost:5169/api/Auth/login", form);
       if (res.status === 200) {
         const token = res.data.token;
         localStorage.setItem("token", token);
-        const decoded = jwtDecode(token); // Fixed usage
+        const decoded = jwtDecode(token); 
         const role = decoded.role;
         localStorage.setItem("role", role);
         setMessage(`Login successful! Role: ${role}`);
         setForm({ username: "", password: "" });
-        setTimeout(() => navigate("/"), 500); // Redirect to landing page
+        setTimeout(() => navigate("/#reload"), 500); 
+        
       } else {
         setError(res.data.message || "Login failed.");
       }
@@ -51,9 +62,9 @@ const LoginPage = () => {
   return (
     <div 
       className="min-h-screen bg-black flex items-center justify-center relative"
-      style={{ backgroundColor: '#000000' }} // Fallback inline style
+      style={{ backgroundColor: '#000000' }} 
     >
-      {/* Background overlay */}
+   
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80"></div>
       
       <div 

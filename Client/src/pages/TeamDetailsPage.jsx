@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Modal from "../components/Modal";
+import { jwtDecode } from "jwt-decode";
 
 const TeamDetailsPage = () => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const TeamDetailsPage = () => {
   const [playerId, setPlayerId] = useState("");
   const [removePlayerId, setRemovePlayerId] = useState(null);
   const [allPlayers, setAllPlayers] = useState([]);
+  const [role, setRole] = useState("");
   const navigate = useNavigate();
 
   const fetchTeam = async () => {
@@ -54,6 +56,11 @@ const TeamDetailsPage = () => {
   useEffect(() => {
     fetchTeam();
     fetchAllPlayers();
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decoded = jwtDecode(token);
+      setRole(decoded.role);
+    }
   }, [id]);
 
   const openEditModal = () => {
@@ -157,21 +164,25 @@ const TeamDetailsPage = () => {
           <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white/20">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-3xl font-extrabold text-white">{team.name}</h2>
-              <button
-                className="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition"
-                onClick={openEditModal}
-              >
-                Edit
-              </button>
+              {role === "Admin" && (
+                <button
+                  className="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition"
+                  onClick={openEditModal}
+                >
+                  Edit
+                </button>
+              )}
             </div>
             <div className="text-gray-300 mb-4">description: {team.description}</div>
             <div className="flex gap-4 mb-6">
-              <button
-                className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2 rounded-full shadow-lg text-lg"
-                onClick={openAddPlayerModal}
-              >
-                + Add Player
-              </button>
+              {role === "Admin" && (
+                <button
+                  className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2 rounded-full shadow-lg text-lg"
+                  onClick={openAddPlayerModal}
+                >
+                  + Add Player
+                </button>
+              )}
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Players</h3>
             <ul className="divide-y divide-white/10">
@@ -181,12 +192,14 @@ const TeamDetailsPage = () => {
                 players.map((player) => (
                   <li key={player.id} className="py-2 flex justify-between items-center text-white">
                     <span>{player.name}</span>
-                    <button
-                      className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
-                      onClick={() => openRemovePlayerModal(player.id)}
-                    >
-                      Remove
-                    </button>
+                    {role === "Admin" && (
+                      <button
+                        className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
+                        onClick={() => openRemovePlayerModal(player.id)}
+                      >
+                        Remove
+                      </button>
+                    )}
                   </li>
                 ))
               )}
@@ -196,80 +209,95 @@ const TeamDetailsPage = () => {
           <div className="text-white text-center">No team found.</div>
         )}
       </div>
-      {/* Edit Modal */}
       <Modal isOpen={modalOpen && modalType === "edit"} onClose={() => setModalOpen(false)}>
-        <h2 className="text-2xl font-bold text-white mb-6 text-center">Edit Team</h2>
-        <form className="space-y-4" onSubmit={handleEdit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Team Name"
-            value={form.name}
-            onChange={handleFormChange}
-            className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
-            required
-          />
-          <input
-            type="text"
-            name="description"
-            placeholder="description"
-            value={form.description}
-            onChange={handleFormChange}
-            className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition duration-200"
-          >
-            Save Changes
-          </button>
-        </form>
-        {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
+        {role === "Admin" ? (
+          <>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Edit Team</h2>
+            <form className="space-y-4" onSubmit={handleEdit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Team Name"
+                value={form.name}
+                onChange={handleFormChange}
+                className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
+                required
+              />
+              <input
+                type="text"
+                name="description"
+                placeholder="description"
+                value={form.description}
+                onChange={handleFormChange}
+                className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
+                required
+              />
+              <button
+                type="submit"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition duration-200"
+              >
+                Save Changes
+              </button>
+            </form>
+            {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
+          </>
+        ) : (
+          <div className="text-white text-center">You do not have permission to edit this team.</div>
+        )}
       </Modal>
-      {/* Add Player Modal */}
       <Modal isOpen={modalOpen && modalType === "addPlayer"} onClose={() => setModalOpen(false)}>
-        <h2 className="text-2xl font-bold text-white mb-6 text-center">Add Player</h2>
-        <form className="space-y-4" onSubmit={handleAddPlayer}>
-          <select
-            value={playerId}
-            onChange={(e) => setPlayerId(e.target.value)}
-            className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
-            required
-          >
-            <option value="">Select Player</option>
-            {allPlayers.map((user) => (
-              <option key={user.id} value={user.id}>{user.name} ({user.email})</option>
-            ))}
-          </select>
-          <button
-            type="submit"
-            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition duration-200"
-          >
-            Add Player
-          </button>
-        </form>
-        {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
+        {role === "Admin" ? (
+          <>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Add Player</h2>
+            <form className="space-y-4" onSubmit={handleAddPlayer}>
+              <select
+                value={playerId}
+                onChange={(e) => setPlayerId(e.target.value)}
+                className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600"
+                required
+              >
+                <option value="">Select Player</option>
+                {allPlayers.map((user) => (
+                  <option key={user.id} value={user.id}>{user.name} ({user.email})</option>
+                ))}
+              </select>
+              <button
+                type="submit"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition duration-200"
+              >
+                Add Player
+              </button>
+            </form>
+            {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
+          </>
+        ) : (
+          <div className="text-white text-center">You do not have permission to add players.</div>
+        )}
       </Modal>
-      {/* Remove Player Modal */}
       <Modal isOpen={modalOpen && modalType === "removePlayer"} onClose={() => setModalOpen(false)}>
-        <h2 className="text-2xl font-bold text-white mb-6 text-center">Remove Player</h2>
-        <p className="text-white mb-6 text-center">Are you sure you want to remove this player?</p>
-        <div className="flex gap-4 justify-center">
-          <button
-            className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded"
-            onClick={() => setModalOpen(false)}
-          >
-            Cancel
-          </button>
-          <button
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded"
-            onClick={handleRemovePlayer}
-          >
-            Remove
-          </button>
-        </div>
-        {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
+        {role === "Admin" ? (
+          <>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Remove Player</h2>
+            <p className="text-white mb-6 text-center">Are you sure you want to remove this player?</p>
+            <div className="flex gap-4 justify-center">
+              <button
+                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded"
+                onClick={() => setModalOpen(false)}
+              >
+                Cancel
+              </button>
+              <button
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded"
+                onClick={handleRemovePlayer}
+              >
+                Remove
+              </button>
+            </div>
+            {actionMsg && <div className="mt-4 text-red-400 text-center">{actionMsg}</div>}
+          </>
+        ) : (
+          <div className="text-white text-center">You do not have permission to remove players.</div>
+        )}
       </Modal>
     </div>
   );

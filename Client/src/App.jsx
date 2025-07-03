@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import SignupPage from "./pages/SignupPage";
 import Footer from "./components/Footer";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
             <Route path="/attendance" element={<AttendancePage />} />
             <Route path="/attendance/player/:playerId" element={<PlayerAttendancePage />} />
             <Route path="/stats/player/:id" element={<PlayerStatsPage />} />
-            <Route path="/stats/team/:id" element={<TeamStatsPage />} />
+            <Route path="/stats/team" element={<TeamStatsPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/contact" element={<AboutUs />} />
             <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         </div>

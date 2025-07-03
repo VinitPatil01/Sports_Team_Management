@@ -41,7 +41,20 @@ namespace SportsTeamManagement.Controllers // Correct namespace
         [HttpGet]
         public async Task<IActionResult> GetAllMatches()
         {
-            var matches = await _context.Matches.ToListAsync();
+            var matches = await _context.Matches
+                .Include(m => m.HomeTeam)
+                .Include(m => m.AwayTeam)
+                .Select(m => new MatchListDto
+                {
+                    Id = m.Id,
+                    MatchDate = m.MatchDate,
+                    Location = m.Location,
+                    HomeTeamId = m.HomeTeamId,
+                    HomeTeamName = m.HomeTeam != null ? m.HomeTeam.Name : string.Empty,
+                    AwayTeamId = m.AwayTeamId,
+                    AwayTeamName = m.AwayTeam != null ? m.AwayTeam.Name : string.Empty
+                })
+                .ToListAsync();
             return Ok(matches);
         }
 
@@ -75,6 +88,36 @@ namespace SportsTeamManagement.Controllers // Correct namespace
             _context.Matches.Remove(match);
             await _context.SaveChangesAsync();
             return NoContent();
+        }
+
+        [HttpGet("player/{playerId}")]
+        public async Task<IActionResult> GetMatchesForPlayer(int playerId)
+        {
+            // Get all team IDs for this player
+            var teamIds = await _context.TeamPlayers
+                .Where(tp => tp.PlayerId == playerId)
+                .Select(tp => tp.TeamId)
+                .ToListAsync();
+
+            // Get all matches where player's team is home or away
+            var matches = await _context.Matches
+                .Where(m => teamIds.Contains(m.HomeTeamId) || teamIds.Contains(m.AwayTeamId))
+                .Include(m => m.HomeTeam)
+                .Include(m => m.AwayTeam)
+                .ToListAsync();
+
+            var result = matches.Select(m => new PlayerMatchDto
+            {
+                Id = m.Id,
+                MatchDate = m.MatchDate,
+                Location = m.Location,
+                HomeTeamId = m.HomeTeamId,
+                HomeTeamName = m.HomeTeam != null ? m.HomeTeam.Name : string.Empty,
+                AwayTeamId = m.AwayTeamId,
+                AwayTeamName = m.AwayTeam != null ? m.AwayTeam.Name : string.Empty
+            }).ToList();
+
+            return Ok(result);
         }
     }
 }

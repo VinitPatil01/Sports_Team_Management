@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "attendance",
-        "Type": "SportsTeamManagementSystem.Models.Attendance",
+        "Name": "dto",
+        "Type": "SportsTeamManagementSystem.DTOs.AttendanceCreateDto",
         "IsRequired": true
       }
     ],
@@ -184,6 +184,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SportsTeamManagement.Controllers.MatchesController",
+    "Method": "GetMatchesForPlayer",
+    "RelativePath": "api/matches/player/{playerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "playerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SportsTeamManagementSystem.Controllers.StatsController",
     "Method": "AddStats",
     "RelativePath": "api/Stats",
@@ -192,8 +208,45 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "stats",
-        "Type": "SportsTeamManagementSystem.Models.PerformanceStats",
+        "Name": "dto",
+        "Type": "SportsTeamManagementSystem.DTOs.PerformanceStatsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportsTeamManagementSystem.Controllers.StatsController",
+    "Method": "UpdateStats",
+    "RelativePath": "api/Stats/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "SportsTeamManagementSystem.DTOs.PerformanceStatsUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportsTeamManagementSystem.Controllers.StatsController",
+    "Method": "DeleteStats",
+    "RelativePath": "api/Stats/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -229,6 +282,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportsTeamManagementSystem.Controllers.StatsController",
+    "Method": "GetPlayerStatsForTeam",
+    "RelativePath": "api/Stats/team/{teamId}/players",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teamId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportsTeamManagementSystem.Controllers.StatsController",
+    "Method": "GetAllTeamsStatsSummary",
+    "RelativePath": "api/Stats/teams/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
