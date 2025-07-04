@@ -12,7 +12,7 @@ namespace SportsTeamManagementSystem.Data
 
             if (context.Users.Any()) return;
 
-            // Create admin user
+            
             var admin = new User
             {
                 Username = "admin",
