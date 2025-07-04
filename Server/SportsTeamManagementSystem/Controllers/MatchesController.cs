@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore; // Add this for async operations
+using Microsoft.EntityFrameworkCore; 
 using SportsTeamManagementSystem.Data;
-using SportsTeamManagementSystem.Models; // Add this for Match model
+using SportsTeamManagementSystem.Models; 
 using SportsTeamManagementSystem.DTOs;
 
-namespace SportsTeamManagement.Controllers // Correct namespace
+namespace SportsTeamManagement.Controllers 
 {
     [ApiController]
     [Route("api/matches")]
@@ -93,13 +93,13 @@ namespace SportsTeamManagement.Controllers // Correct namespace
         [HttpGet("player/{playerId}")]
         public async Task<IActionResult> GetMatchesForPlayer(int playerId)
         {
-            // Get all team IDs for this player
+            
             var teamIds = await _context.TeamPlayers
                 .Where(tp => tp.PlayerId == playerId)
                 .Select(tp => tp.TeamId)
                 .ToListAsync();
 
-            // Get all matches where player's team is home or away
+            
             var matches = await _context.Matches
                 .Where(m => teamIds.Contains(m.HomeTeamId) || teamIds.Contains(m.AwayTeamId))
                 .Include(m => m.HomeTeam)

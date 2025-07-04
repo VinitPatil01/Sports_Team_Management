@@ -94,15 +94,13 @@ namespace SportsTeamManagement.Controllers
         [HttpPost("{teamId}/add-player")]
         public async Task<IActionResult> AddPlayer(int teamId, [FromQuery] int playerId)
         {
-            // Check if team exists
+     
             var team = await _context.Teams.FindAsync(teamId);
             if (team == null) return NotFound("Team not found");
 
-            // Check if player exists
             var player = await _context.Users.FindAsync(playerId);
             if (player == null) return NotFound("Player not found");
 
-            // Check if already in team
             var exists = await _context.TeamPlayers
                 .AnyAsync(tp => tp.TeamId == teamId && tp.PlayerId == playerId);
 
