@@ -145,14 +145,14 @@ const AttendancePage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black py-12 px-4 relative">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black py-12 px-2 sm:px-4 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
-      <div className="relative z-10 bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-2xl border border-white/20">
-        <h2 className="text-3xl font-extrabold text-white mb-8 text-center tracking-wide">Attendance</h2>
+      <div className="relative z-10 bg-white/10 backdrop-blur-md p-6 sm:p-10 rounded-2xl shadow-2xl w-full max-w-2xl border border-white/20">
+        <h2 className="text-3xl font-extrabold text-white mb-8 text-center tracking-wide drop-shadow-lg">Attendance</h2>
         {role === "Player" && (
           <>
-            <form className="mb-8 flex gap-4 flex-col sm:flex-row" onSubmit={handleMarkAttendance}>
-              <select value={selectedMatch} onChange={e => setSelectedMatch(e.target.value)} className="bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none">
+            <form className="mb-8 flex flex-col sm:flex-row gap-4 items-stretch" onSubmit={handleMarkAttendance}>
+              <select value={selectedMatch} onChange={e => setSelectedMatch(e.target.value)} className="bg-gray-800 text-white px-4 py-3 rounded-lg border border-gray-700 focus:border-red-500 focus:outline-none shadow-sm transition">
                 <option value="">Select Match</option>
                 {matches.map(m => (
                   <option key={m.id} value={m.id}>
@@ -160,56 +160,72 @@ const AttendancePage = () => {
                   </option>
                 ))}
               </select>
-              <select value={isPresent ? "present" : "absent"} onChange={e => setIsPresent(e.target.value === "present")} className="bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none">
+              <select value={isPresent ? "present" : "absent"} onChange={e => setIsPresent(e.target.value === "present")} className="bg-gray-800 text-white px-4 py-3 rounded-lg border border-gray-700 focus:border-red-500 focus:outline-none shadow-sm transition">
                 <option value="present">Present</option>
                 <option value="absent">Absent</option>
               </select>
-              <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded transition duration-200">Mark Attendance</button>
+              <button className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-400">Mark Attendance</button>
             </form>
-            <h3 className="text-xl font-bold text-white mb-4">My Attendance</h3>
-            <ul>
-              {playerAttendance.map((a, idx) => (
-                <li key={idx} className="border-b border-white/10 py-2 flex justify-between items-center text-white">
-                  <span>{a.attendanceDate ? a.attendanceDate.substring(0, 10) : "-"}</span>
-                  <span className={a.isPresent ? "text-green-400" : "text-red-400"}>{a.isPresent ? "Present" : "Absent"}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="bg-gray-900/70 rounded-xl p-5 shadow-inner mb-8 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><span className="inline-block w-2 h-6 bg-red-500 rounded-full mr-2"></span>My Attendance</h3>
+              {playerAttendance.length === 0 ? (
+                <div className="text-gray-300 text-center py-4">No attendance records found.</div>
+              ) : (
+                <ul className="divide-y divide-white/10">
+                  {playerAttendance.map((a, idx) => (
+                    <li key={idx} className="py-2 flex justify-between items-center text-white">
+                      <span className="font-mono text-sm">{a.attendanceDate ? a.attendanceDate.substring(0, 10) : "-"}</span>
+                      <span className={a.isPresent ? "text-green-400 font-semibold" : "text-red-400 font-semibold"}>{a.isPresent ? "Present" : "Absent"}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </>
         )}
         {role === "Admin" && (
           <>
-            <form className="mb-8 flex gap-4 flex-col sm:flex-row" onSubmit={handleGetTeamAttendance}>
-              <input type="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} className="bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none" />
-              <select value={selectedTeam} onChange={e => setSelectedTeam(e.target.value)} className="bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none">
+            <form className="mb-8 flex flex-col sm:flex-row gap-4 items-stretch" onSubmit={handleGetTeamAttendance}>
+              <input type="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} className="bg-gray-800 text-white px-4 py-3 rounded-lg border border-gray-700 focus:border-red-500 focus:outline-none shadow-sm transition" />
+              <select value={selectedTeam} onChange={e => setSelectedTeam(e.target.value)} className="bg-gray-800 text-white px-4 py-3 rounded-lg border border-gray-700 focus:border-red-500 focus:outline-none shadow-sm transition">
                 <option value="">Select Team</option>
                 {teams.map(t => (
                   <option key={t.id} value={t.id}>{t.name || t.teamName || `Team ${t.id}`}</option>
                 ))}
               </select>
-              <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded transition duration-200">Get Attendance</button>
+              <button className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-400">Get Attendance</button>
             </form>
-            <h3 className="text-xl font-bold text-white mb-4">Team Attendance</h3>
-            <ul>
-              {teamAttendance.map((a, idx) => (
-                <li key={idx} className="border-b border-white/10 py-2 flex justify-between items-center text-white">
-                  <span>{a.player || a.playerName || `Player ${a.playerId}`}</span>
-                  <span className={a.isPresent ? "text-green-400" : "text-red-400"}>{a.isPresent ? "Present" : "Absent"}</span>
-                  <button className="ml-4 text-blue-400 underline" onClick={() => handleViewPlayerAttendance(a.playerId)}>View</button>
-                </li>
-              ))}
-            </ul>
-            {viewPlayerId && (
-              <div className="mt-8">
-                <h4 className="text-lg font-bold text-white mb-2">Attendance for Player {viewPlayerId}</h4>
-                <ul>
-                  {viewPlayerAttendance.map((a, idx) => (
-                    <li key={idx} className="border-b border-white/10 py-2 flex justify-between items-center text-white">
-                      <span>{a.attendanceDate ? a.attendanceDate.substring(0, 10) : "-"}</span>
-                      <span className={a.isPresent ? "text-green-400" : "text-red-400"}>{a.isPresent ? "Present" : "Absent"}</span>
+            <div className="bg-gray-900/70 rounded-xl p-5 shadow-inner mb-8 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><span className="inline-block w-2 h-6 bg-red-500 rounded-full mr-2"></span>Team Attendance</h3>
+              {teamAttendance.length === 0 ? (
+                <div className="text-gray-300 text-center py-4">No attendance data for this team/date.</div>
+              ) : (
+                <ul className="divide-y divide-white/10">
+                  {teamAttendance.map((a, idx) => (
+                    <li key={idx} className="py-2 flex flex-col sm:flex-row justify-between items-center text-white group">
+                      <span className="font-semibold mb-1 sm:mb-0">{a.player || a.playerName || `Player ${a.playerId}`}</span>
+                      <span className={a.isPresent ? "text-green-400 font-semibold" : "text-red-400 font-semibold"}>{a.isPresent ? "Present" : "Absent"}</span>
+                      <button className="ml-0 sm:ml-4 mt-2 sm:mt-0 text-blue-400 underline hover:text-blue-300 transition" onClick={() => handleViewPlayerAttendance(a.playerId)}>View</button>
                     </li>
                   ))}
                 </ul>
+              )}
+            </div>
+            {viewPlayerId && (
+              <div className="bg-gray-800/80 rounded-xl p-5 shadow-inner mt-8 border border-white/10">
+                <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-2"><span className="inline-block w-2 h-5 bg-blue-400 rounded-full mr-2"></span>Attendance for Player {viewPlayerId}</h4>
+                {viewPlayerAttendance.length === 0 ? (
+                  <div className="text-gray-300 text-center py-4">No attendance records for this player.</div>
+                ) : (
+                  <ul className="divide-y divide-white/10">
+                    {viewPlayerAttendance.map((a, idx) => (
+                      <li key={idx} className="py-2 flex justify-between items-center text-white">
+                        <span className="font-mono text-sm">{a.attendanceDate ? a.attendanceDate.substring(0, 10) : "-"}</span>
+                        <span className={a.isPresent ? "text-green-400 font-semibold" : "text-red-400 font-semibold"}>{a.isPresent ? "Present" : "Absent"}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             )}
           </>

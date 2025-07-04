@@ -11,16 +11,57 @@ const SignupPage = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validations = () => {
+    const newErrors = {};
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[#@$*]).{5,20}$/;
+    
+
+    if (!form.username.trim()) {
+      newErrors.username = "Username is required.";
+    } else if (form.username.trim().length < 3) {
+      newErrors.username = "Username must be at least 3 characters long.";
+    }
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "Valid email is required.";
+    }
+    
+    if (!form.password.trim()) {
+      newErrors.password = "Password is required.";
+    } else if (!passwordRegex.test(form.password)) {
+      newErrors.password =
+        "Password must be 5-20 characters long and include at least one uppercase letter, one lowercase letter, and one special character (#, @, $, *).";
+    }
+    
+    return newErrors;
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: "" });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationErrors = validations();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setError("Please fill all required fields correctly");
+      return;
+    } else {
+      setErrors({});
+    }
+
     setLoading(true);
     setMessage("");
     setError("");
+    
     try {
       const res = await axios.post("http://localhost:5169/api/Auth/register", form);
       if (res.status === 200 || res.status === 201) {
@@ -34,7 +75,6 @@ const SignupPage = () => {
         setError(err.response.data.message);
       } else {
         setError("Network error. Please try again.");
-        
       }
     } finally {
       setLoading(false);
@@ -56,9 +96,10 @@ const SignupPage = () => {
               onChange={handleChange}
               className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none"
               style={{ backgroundColor: '#333333', color: 'white', padding: '12px 16px', border: '1px solid #666666', borderRadius: '4px' }}
-              required
             />
+            {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
           </div>
+          
           <div>
             <input
               type="email"
@@ -68,9 +109,10 @@ const SignupPage = () => {
               onChange={handleChange}
               className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none"
               style={{ backgroundColor: '#333333', color: 'white', padding: '12px 16px', border: '1px solid #666666', borderRadius: '4px' }}
-              required
             />
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </div>
+          
           <div>
             <input
               type="password"
@@ -80,9 +122,10 @@ const SignupPage = () => {
               onChange={handleChange}
               className="w-full bg-gray-700 text-white px-4 py-3 rounded border border-gray-600 focus:border-red-600 focus:outline-none"
               style={{ backgroundColor: '#333333', color: 'white', padding: '12px 16px', border: '1px solid #666666', borderRadius: '4px' }}
-              required
             />
+            {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
           </div>
+          
           <div>
             <select
               name="role"
@@ -95,6 +138,7 @@ const SignupPage = () => {
               <option value="Admin">Admin</option>
             </select>
           </div>
+          
           <button
             type="submit"
             className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition duration-200 disabled:opacity-60"
@@ -104,8 +148,10 @@ const SignupPage = () => {
             {loading ? "Signing Up..." : "Sign Up"}
           </button>
         </form>
+        
         {message && <div className="mt-4 text-green-400 text-center">{message}</div>}
         {error && <div className="mt-4 text-red-400 text-center">{error}</div>}
+        
         <div className="mt-6 text-center">
           <span className="text-gray-400" style={{ color: '#999999' }}>
             Already have an account?
@@ -119,4 +165,4 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage; 
+export default SignupPage;

@@ -69,12 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|c:\\users\\vinit\\music\\projects\\sports_team_management_dotnet\\server\\sportsteammanagementsystem\\migrations\\20250702163742_addpasswordsaltcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C2B11E5-83E5-4D7C-B5AA-C00FC7A8F026}|SportsTeamManagementSystem\\SportsTeamManagementSystem.csproj|solutionrelative:sportsteammanagementsystem\\migrations\\20250702163742_addpasswordsaltcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\AppData\\Local\\Temp\\jwsge1ak..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VINIT\\AppData\\Local\\Temp\\jwsge1ak..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -93,13 +87,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SQLQuery1.sql ",
+              "Title": "jwsge1ak..sql",
               "DocumentMoniker": "C:\\Users\\VINIT\\AppData\\Local\\Temp\\jwsge1ak..sql",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\jwsge1ak..sql",
-              "ToolTip": "SQLQuery1.sql *",
+              "ToolTip": "C:\\Users\\VINIT\\AppData\\Local\\Temp\\jwsge1ak..sql",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\jwsge1ak..sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-03T19:38:24.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T19:38:24.605Z"
             },
             {
               "$type": "Document",
@@ -191,8 +185,7 @@
               "RelativeToolTip": "SportsTeamManagementSystem\\Controllers\\TeamsController.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAYwIsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T16:10:59.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T16:10:59.922Z"
             },
             {
               "$type": "Document",
